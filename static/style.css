@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #0b0c10;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Background Glow Effects */
+.glow-orb {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.orb-1 {
+  top: 10%;
+  left: 15%;
+  background: radial-gradient(circle, #f58529, #dd2a7b);
+}
+
+.orb-2 {
+  bottom: 10%;
+  right: 15%;
+  background: radial-gradient(circle, #8134af, #515bd4);
+}
+
+/* Glassmorphism Card */
+.card-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+}
+
+.glass-card {
+  background: rgba(22, 24, 35, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.logo-box {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 16px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insta-svg {
+  width: 32px;
+  height: 32px;
+  stroke: #ffffff;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #a0a0a0;
+  font-size: 0.88rem;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+/* Inputs */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  margin-bottom: 14px;
+  padding: 0 12px;
+}
+
+.input-prefix {
+  color: #888;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 6px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.input-group input::placeholder {
+  color: #666;
+}
+
+/* Submit Button */
+button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 6px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}
+
+.status-msg {
+  font-size: 0.85rem;
+  margin-top: 14px;
+}
+
+.status-msg.error {
+  color: #ff6b6b;
+}
+
+.status-msg.success {
+  color: #51cf66;
+}
+
+footer {
+  margin-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+}
+
+.disclaimer {
+  color: #777;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
