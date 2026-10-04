@@ -1,0 +1,15 @@
+# Virtual Environment
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+
+# Data
+submissions.csv
+
+# OS metadata
+.DS_Store
+Thumbs.db
